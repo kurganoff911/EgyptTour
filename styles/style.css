@@ -108,12 +108,19 @@ p {
 }
 
 .btn_main {
-  padding: 20px 30px;
+  padding: 18px 28px;
   text-align: center;
   font-size: 17px;
   color: var(--color-white);
+  border: 2px solid var(--color-orange);
   border-radius: 12px;
-  background: #FF5029;
+  background-color: var(--color-orange);
+  transition: background-color .3s ease-in-out, color .3s ease-in-out;
+}
+
+.btn_main:hover {
+  color: var(--color-orange);
+  background-color: var(--color-white);
 }
 
 .main_title {
@@ -174,6 +181,16 @@ p {
 
 .menu__item {
   margin-right: 40px;
+  transition: border-bottom .3s ease-in-out;
+}
+
+.menu__link {
+  border-bottom: 1px solid transparent;
+  transition: border-color .3s ease-in-out;
+}
+
+.menu__item .menu__link:hover {
+  border-color: var(--color-orange);
 }
 
 /* hero */
@@ -238,7 +255,7 @@ p {
 }
 
 .hero__form-btn {
-  padding: 27px 31px;
+  padding: 25px 29px;
 }
 
 /* Guides */
@@ -292,6 +309,19 @@ p {
   font-size: 15px;
   line-height: 22px;
   color: rgba(11, 6, 20, 0.60);
+}
+
+.guide_active {
+  color: var(--color-white);
+  background: var(--color-orange);
+}
+
+.guide_active svg path {
+  fill: var(--color-white);
+}
+
+.guide_active .guide__review {
+  color: rgba(255, 255, 255, 0.60);
 }
 
 /* How */
@@ -376,7 +406,7 @@ p {
 
 .tourist__btn {
   margin-bottom: 25px;
-  padding: 20px 40px;
+  padding: 18px 38px;
 }
 
 .tourist__btn-under {
@@ -568,6 +598,19 @@ p {
   height: 40px;
   border: 1px solid var(--color-orange);
   border-radius: 50%;
+  transition: border-color .3s ease-in-out, fill .3s ease-in-out;
+}
+
+.social_link svg path {
+  transition: fill .3s ease-in-out;
+}
+
+.social_link:hover {
+  border-color: var(--color-white);
+}
+
+.social_link:hover svg path {
+  fill: var(--color-white);
 }
 
 .social_link:not(:last-child) {
